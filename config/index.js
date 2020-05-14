@@ -13,7 +13,11 @@ module.exports = {
     proxyTable: {},
 
     // Various Dev Server settings
-    host: 'localhost', // can be overwritten by process.env.HOST
+    //host: 'localhost', // can be overwritten by process.env.HOST
+    //vue-cli起的webpack项目 用localhost可以访问，但是切换到ip就不可以访问, https://www.cnblogs.com/wangyanhua95/p/7954019.html
+    //发现用http://localhost:8081/访问的挺好的，但是换到ip就访问不了，期初我以为是代理的原因，将电脑的代理给关掉了。还是不行，然后改为127.0.0.1访问，发现可以访问，用0.0.0.0访问也可以，就是ip不行,
+    //在config里面的index.js里面的module.exports下面的dev下面的host:'localhost' 改为 host:'0.0.0.0',就可以访问啦！
+    host: '0.0.0.0',
     port: 8090, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined
     autoOpenBrowser: false,
     errorOverlay: true,
