@@ -1,36 +1,27 @@
 # mall-admin-web
-
-## 说明
-
-> 基于Vue+Element的电商后台管理系统，完整实现了整个流程。
-
-> 该项目为前后端分离项目，搭建步骤具体参考后端项目[传送门](https://github.com/macrozheng/mall)。
-
-> 如果该项目对您有帮助，您可以点右上角 "Star" 支持一下 谢谢！
-
-> 或者您可以 "follow" 一下，该项目将持续更新，不断完善功能。
-
-> 项目交流QQ群：[959351312](http://qm.qq.com/cgi-bin/qm/qr?k=V6xu5c12j9qhnMUNdDRzakNxRKzOxibQ)。
-
-> 如有问题或者好的建议可以在 Issues 中提。
+<p>
+  <a href="#公众号"><img src="http://macro-oss.oss-cn-shenzhen.aliyuncs.com/mall/badge/%E5%85%AC%E4%BC%97%E5%8F%B7-macrozheng-blue.svg" alt="公众号"></a>
+  <a href="#公众号"><img src="http://macro-oss.oss-cn-shenzhen.aliyuncs.com/mall/badge/%E4%BA%A4%E6%B5%81-%E5%BE%AE%E4%BF%A1%E7%BE%A4-2BA245.svg" alt="交流"></a>
+  <a href="https://github.com/macrozheng/mall"><img src="http://macro-oss.oss-cn-shenzhen.aliyuncs.com/mall/badge/%E5%90%8E%E5%8F%B0%E9%A1%B9%E7%9B%AE-mall-blue.svg" alt="后台项目"></a>
+  <a href="https://github.com/macrozheng/mall-swarm"><img src="http://macro-oss.oss-cn-shenzhen.aliyuncs.com/mall/badge/Cloud%E7%89%88%E6%9C%AC-mall--swarm-brightgreen.svg" alt="SpringCloud版本"></a>
+  <a href="https://gitee.com/macrozheng/mall-admin-web"><img src="http://macro-oss.oss-cn-shenzhen.aliyuncs.com/mall/badge/%E7%A0%81%E4%BA%91-%E9%A1%B9%E7%9B%AE%E5%9C%B0%E5%9D%80-orange.svg" alt="码云"></a>
+</p>
 
 ## 前言
 
-`mall`项目后台管理系统的前端项目
-[传送门](https://github.com/macrozheng/mall)。
+该项目为前后端分离项目的前端部分，后端项目`mall`地址：[传送门](https://github.com/macrozheng/mall)。
 
 ## 项目介绍
 
-`mall-admin-web`是一个电商后台管理系统的前端项目，基于Vue+Element实现。
-主要包括商品管理、订单管理、会员管理、促销管理、运营管理、内容管理、统计报表、财务管理、权限管理、设置等功能。
+`mall-admin-web`是一个电商后台管理系统的前端项目，基于Vue+Element实现。主要包括商品管理、订单管理、会员管理、促销管理、运营管理、内容管理、统计报表、财务管理、权限管理、设置等功能。
 
-## 项目演示
+### 项目演示
 
-项目在线演示地址：[http://39.98.190.128/index.html](http://39.98.190.128/index.html)  
+项目在线演示地址：[http://www.macrozheng.com/admin/](http://www.macrozheng.com/admin/)  
 
-![https://github.com/macrozheng/mall/blob/master/document/resource/mall-admin.gif](https://github.com/macrozheng/mall/blob/master/document/resource/mall-admin.gif)
+![后台管理系统功能演示](http://img.macrozheng.com/mall/project/mall_admin_show.png)
 
-## 技术选型
+### 技术选型
 
 技术 | 说明 | 官网
 ----|----|----
@@ -66,17 +57,28 @@ src -- 源码目录
 ```
 
 ## 搭建步骤
-- 下载node并安装：[https://nodejs.org/dist/v8.9.4/node-v8.9.4-x64.msi](https://nodejs.org/dist/v8.9.4/node-v8.9.4-x64.msi);
+- 下载node并安装：[https://nodejs.org/dist/v12.14.0/node-v12.14.0-x64.msi](https://nodejs.org/dist/v12.14.0/node-v12.14.0-x64.msi);
 - 该项目为前后端分离项目，访问本地访问接口需搭建后台环境，搭建请参考后端项目[传送门](https://github.com/macrozheng/mall);
-- 访问在线接口无需搭建后台环境，只需将config/dev.env.js文件中的BASE_API改为[http://39.98.190.128:8080](http://39.98.190.128:8080)即可;
+- 访问在线接口无需搭建后台环境，只需将`config/dev.env.js`文件中的`BASE_API`改为[http://admin-api.macrozheng.com](http://admin-api.macrozheng.com)即可;
+- 如果你对接的是[mall-swarm](https://github.com/macrozheng/mall-swarm)微服务后台的话，所有接口都需要通过网关访问，需要将`config/dev.env.js`文件中的`BASE_API`改为[http://localhost:8201/mall-admin](http://localhost:8201/mall-admin)；
 - 克隆源代码到本地，使用IDEA打开，并完成编译;
 - 在IDEA命令行中运行命令：npm install,下载相关依赖;
 - 在IDEA命令行中运行命令：npm run dev,运行项目;
 - 访问地址：[http://localhost:8090](http://localhost:8090) 即可打开后台管理系统页面;
-- 如果遇到无法运行该命令，需要配置npm的环境变量，如在path变量中添加：C:\Users\zhenghong\AppData\Roaming\npm。
+- 具体部署过程请参考：[mall前端项目的安装与部署](http://www.macrozheng.com/#/deploy/mall_deploy_web)
+- `注意`：如果遇到无法运行npm命令，需要配置npm的环境变量，如在path变量中添加：C:\Users\zhenghong\AppData\Roaming\npm;
+- `注意`：如果遇到npm install无法成功下载依赖，请参考[使用Jenkins一键打包部署前端应用，就是这么6！](http://www.macrozheng.com/#/reference/jenkins_vue) 中`遇到的坑`部分。
+
+## 公众号
+
+学习不走弯路，关注公众号「**macrozheng**」，回复「**学习路线**」，获取mall项目专属学习路线！
+
+加微信群交流，公众号后台回复「**加群**」即可。
+
+![公众号图片](http://macro-oss.oss-cn-shenzhen.aliyuncs.com/mall/banner/qrcode_for_macrozheng_258.jpg)
 
 ## 许可证
 
-[MIT](https://github.com/macrozheng/mall-admin-web/blob/master/LICENSE)
+[Apache License 2.0](https://github.com/macrozheng/mall-admin-web/blob/master/LICENSE)
 
-Copyright (c) 2018-2019 macrozheng
+Copyright (c) 2018-2021 macrozheng
